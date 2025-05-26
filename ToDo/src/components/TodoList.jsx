@@ -1,10 +1,10 @@
 import React from "react";
-import { TodoList } from "../styles/TodoListStyles";
-import { TodoItem } from "../styles/TodoItemStyles.jsx";
+import { StyledTodoList } from "../styles/TodoListStyles";
+import TodoItem from "./TodoItem";
 
 function TodoList({ todos, onToggle, onDelete }) {
   return (
-    <TodoList>
+    <StyledTodoList>
       {todos.map((todo) => (
         <TodoItem
           key={todo.id}
@@ -13,7 +13,7 @@ function TodoList({ todos, onToggle, onDelete }) {
           onDelete={() => onDelete(todo.id)}
         />
       ))}
-    </TodoList>
+    </StyledTodoList>
   );
 }
 

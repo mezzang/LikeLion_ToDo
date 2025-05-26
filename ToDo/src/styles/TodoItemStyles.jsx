@@ -23,10 +23,10 @@
 // }
 import styled from "styled-components";
 
-export const TodoItem = styled.div`
+export const TodoItemStyles = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 8px;
+  padding: 20px;
   border-bottom: 1px solid #ddd;
 `;
 

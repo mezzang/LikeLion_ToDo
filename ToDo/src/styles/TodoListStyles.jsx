@@ -20,14 +20,14 @@
 // }
 import styled from "styled-components";
 
-export const TodoList = styled.div`
-  width: 700px;
+export const StyledTodoList = styled.div`
+  width: 800px;
   margin: 0 auto;
-  height: 500px;
+  height: 600px;
   overflow-y: auto;
   border: 2px solid orange;
   border-radius: 20px;
-  padding: 10px;
+  padding: 3px;
   background-color: #fff8ee;
   box-sizing: border-box;
 

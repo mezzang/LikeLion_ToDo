@@ -1,15 +1,19 @@
 import React from "react";
-import { TodoItem, TodoText, TodoButton } from "../styles/StyledTodoItem";
+import {
+  TodoItemStyles,
+  TodoText,
+  TodoButton,
+} from "../styles/TodoItemStyles.jsx";
 
 function TodoItem({ todo, onToggle, onDelete }) {
   return (
-    <TodoItem>
+    <TodoItemStyles>
       <TodoText completed={todo.completed}>{todo.text}</TodoText>
       <div>
         <TodoButton onClick={onToggle}>완료</TodoButton>
         <TodoButton onClick={onDelete}>삭제</TodoButton>{" "}
       </div>
-    </TodoItem>
+    </TodoItemStyles>
   );
 }
 

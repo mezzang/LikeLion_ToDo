@@ -27,7 +27,7 @@ export const InputWrapper = styled.div`
   margin: 30px;
 `;
 
-export const TodoInput = styled.input`
+export const StyledTodoInput = styled.input`
   padding: 10px;
   font-size: 1rem;
   border: 1px solid #ccc;

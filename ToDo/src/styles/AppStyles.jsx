@@ -25,12 +25,12 @@ export const LayoutContainer = styled.div`
 
 export const LayoutHeader = styled.header`
   background-color: #fbc057;
-  padding: 30px;
+  padding: 70px;
   font-size: 2.5rem;
   color: white;
   text-shadow: 1px 1px 2px gray;
 `;
 
 export const LayoutMain = styled.main`
-  margin-top: 40px;
+  margin-top: 30px;
 `;

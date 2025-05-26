@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { InputWrapper, TodoInput } from "../styles/StyledInput";
+import { InputWrapper, StyledTodoInput } from "../styles/TodoInputStyles.jsx";
 import { StyledButton } from "../styles/InputButtonStyles.jsx";
 
 function TodoInput({ onAdd }) {
@@ -23,7 +23,13 @@ function TodoInput({ onAdd }) {
 
   return (
     <InputWrapper>
-      <TodoInput placeholder="할 일을 입력하세요" />
+      <StyledTodoInput
+        placeholder="할 일을 입력하세요"
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+        onKeyDown={handleKeyDown}
+        ref={inputRef}
+      />
       <StyledButton onClick={handleAdd}>add</StyledButton>
     </InputWrapper>
   );
