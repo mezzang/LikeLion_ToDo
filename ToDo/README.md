@@ -19,9 +19,9 @@
 
 ## 4. this 체험
 
-    ![일반 함수 this바인딩](image-2.png)
+    ![일반 함수 this바인딩](./image-2.png)
     일반 함수는 이벤트 핸들러로 호출될 때, this가 해당 DOM요소로 바인딩되지만 strict mode에서는 undefined이 할당된다.
-    ![화살표 함수 this 바인딩](image-3.png)
+    ![화살표 함수 this 바인딩](./image-3.png)
     화살표 함수는 상위 스코프의 this를 그대로 상속받는데, TodoInput 컴포넌트 함수는 일반 함수이기 때문에 undefined가 할당된다. strict mode이기 때문이다.
 
 ---
