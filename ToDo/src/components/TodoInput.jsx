@@ -8,12 +8,22 @@ function TodoInput({ onAdd }) {
 
   const handleAdd = () => {
     const trimmed = input.trim();
+    console.log("handleAdd this: ", this);
     if (trimmed) {
       onAdd(trimmed);
       setInput("");
       inputRef.current.focus();
     }
   };
+  // const handleAdd = function () {
+  //   console.log("handleAdd this:", this);
+  //   const trimmed = input.trim();
+  //   if (trimmed) {
+  //     onAdd(trimmed);
+  //     setInput("");
+  //     inputRef.current.focus();
+  //   }
+  // }
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
