@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
-import "../styles/TodoInput.css";
-import "../styles/InputButton.css";
+import { InputWrapper, TodoInput } from "../styles/StyledInput";
+import { StyledButton } from "../styles/InputButtonStyles.jsx";
 
 function TodoInput({ onAdd }) {
   const [input, setInput] = useState("");
@@ -22,20 +22,10 @@ function TodoInput({ onAdd }) {
   };
 
   return (
-    <div className="input-wrapper">
-      <input
-        type="text"
-        className="todo-input"
-        placeholder="add the list"
-        value={input}
-        ref={inputRef}
-        onChange={(e) => setInput(e.target.value)}
-        onKeyDown={handleKeyDown}
-      />
-      <button className="input-button" onClick={handleAdd}>
-        add
-      </button>
-    </div>
+    <InputWrapper>
+      <TodoInput placeholder="할 일을 입력하세요" />
+      <StyledButton onClick={handleAdd}>add</StyledButton>
+    </InputWrapper>
   );
 }
 
