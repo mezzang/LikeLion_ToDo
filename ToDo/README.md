@@ -1,12 +1,29 @@
-# React + Vite
+# 멋사 2차 세션 과제
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 1. Todo 기능 구현
 
-Currently, two official plugins are available:
+## 2. styled-componenrs를 사용하여 스타일 표현
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 3. 실행 컨텍스트 실험
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+    ![변수 선언과 할당](image.png)
+    선언문만 호이스팅되어 실행된다.
+    할당은 그대로 유지된다.
+    ![중첩 함수](image-1.png)
+    함수가 선언되면 함수의 내용이 정의만 되고 실행은 호출될 때 실행된다.
+    outer()이 실행되면서 a에 값이 할당되어 출력되고 inner()가 선언되고 실행되면서 b의 값이 할당되고 출력되는 실행 컨텍스트를 가진다.
+
+---
+
+## 4. this 체험
+
+    ![일반 함수 this바인딩](image-2.png)
+    일반 함수는 이벤트 핸들러로 호출될 때, this가 해당 DOM요소로 바인딩되지만 strict mode에서는 undefined이 할당된다.
+    ![화살표 함수 this 바인딩](image-3.png)
+    화살표 함수는 상위 스코프의 this를 그대로 상속받는데, TodoInput 컴포넌트 함수는 일반 함수이기 때문에 undefined가 할당된다. strict mode이기 때문이다.
+
+---
+
+## 5. DOM 직접 조작
