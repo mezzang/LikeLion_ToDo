@@ -6,24 +6,15 @@ function TodoInput({ onAdd }) {
   const [input, setInput] = useState("");
   const inputRef = useRef(null);
 
-  const handleAdd = () => {
+  const handleAdd = function () {
+    console.log("handleAdd this:", this);
     const trimmed = input.trim();
-    console.log("handleAdd this: ", this);
     if (trimmed) {
       onAdd(trimmed);
       setInput("");
       inputRef.current.focus();
     }
   };
-  // const handleAdd = function () {
-  //   console.log("handleAdd this:", this);
-  //   const trimmed = input.trim();
-  //   if (trimmed) {
-  //     onAdd(trimmed);
-  //     setInput("");
-  //     inputRef.current.focus();
-  //   }
-  // }
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
@@ -40,7 +31,31 @@ function TodoInput({ onAdd }) {
         onKeyDown={handleKeyDown}
         ref={inputRef}
       />
-      <StyledButton onClick={handleAdd}>add</StyledButton>
+      {/* <StyledButton onClick={handleAdd}>add</StyledButton> */}
+      {/* <StyledButton
+        onClick={function () {
+          console.log("handleAdd(일반 함수) this:", this);
+          const trimmed = input.trim();
+          if (trimmed) {
+            onAdd(trimmed);
+            setInput("");
+            inputRef.current.focus();
+          }
+        }}
+      > */}
+      <StyledButton
+        onClick={() => {
+          console.log("handleAdd(화살표 함수) this:", this);
+          const trimmed = input.trim();
+          if (trimmed) {
+            onAdd(trimmed);
+            setInput("");
+            inputRef.current.focus();
+          }
+        }}
+      >
+        add
+      </StyledButton>
     </InputWrapper>
   );
 }
