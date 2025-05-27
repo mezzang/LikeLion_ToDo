@@ -12,7 +12,7 @@ function TodoItem({ todo, onToggle, onDelete }) {
       <TodoText completed={todo.completed}>{todo.text}</TodoText>
       <div>
         <TodoButton onClick={onToggle}>완료</TodoButton>
-        <TodoButton onClick={onDelete}>삭제</TodoButton> // 트리거
+        <TodoButton onClick={onDelete}>삭제</TodoButton> {/* 트리거 함수 */}
       </div>
     </TodoItemStyles>
   );
